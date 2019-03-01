@@ -10,6 +10,7 @@ Instructions and scripts for collecting and analyzing data with Eyelink 1000 usi
 1. MATLAB (32 or 64 bit)
 1. PsychToolbox (instructions [here](http://psychtoolbox.org/download))
 1. SR Research SDK (download [here](http://download.sr-support.com/displaysoftwarerelease/EyeLinkDevKit_Windows_1.11.5.zip) and install)
+1. A computer with an Ethernet port (some laptops do not have this)
 
 ## Network Setup
 *This process will disable network and internet access until manually undone. To undo, follow the same steps but set the TCP/IPv4 back to automatic ip.*
@@ -35,11 +36,11 @@ Instructions and scripts for collecting and analyzing data with Eyelink 1000 usi
 1. Ensure that the network settings have been adjusted (see above). You do not need to repeat this if the changes have already been set and not manually undone.
 1. Turn off the Eyelink PC if it is already on
 1. Close MATLAB if it is already open
-1. Connect the ethernet cable from Eyelink PC to MATLAB PC
+1. Connect the Ethernet cable from Eyelink PC to MATLAB PC
 1. Connect the power cable from an outlet to the Eyelink
 1. Connect the data cable from the Eyelink PC to the Eyelink
 1. Connect the two plugs labeled L and R into the Left and Right sockets on the IR source box
 1. Turn on the Eyelink PC and select to boot Eyelink (instead of Windows) when prompted
 1. The Eyelink PC will enter DOS. Type `elcl` and press ENTER to start the Eyelink software
-1. Ensure that Eyelink software does not say “Cable FAULT” in the top right corner. If it does, check the ethernet cable and turn the Eyelink PC off and then on again.
+1. Ensure that Eyelink software does not say “Cable FAULT” in the top right corner. If it does, check the Ethernet cable and turn the Eyelink PC off and then on again.
 1. Start MATLAB on the MATLAB PC
