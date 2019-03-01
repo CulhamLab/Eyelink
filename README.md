@@ -9,7 +9,7 @@ Instructions and scripts for collecting and analyzing data with Eyelink 1000 usi
 1. Windows (for SR Research SDK)
 1. MATLAB (32 or 64 bit)
 1. PsychToolbox (instructions [here](http://psychtoolbox.org/download))
-1. SR Research SDK (download [here](http://download.sr-support.com/displaysoftwarerelease/EyeLinkDevKit_Windows_1.11.5.zip))
+1. SR Research SDK (download [here](http://download.sr-support.com/displaysoftwarerelease/EyeLinkDevKit_Windows_1.11.5.zip) and install)
 
 ## Network Setup
 *This process will disable network and internet access until manually undone. To undo, follow the same steps but set the TCP/IPv4 back to automatic ip.*
