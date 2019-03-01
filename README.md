@@ -38,6 +38,7 @@ Instructions and scripts for collecting and analyzing data with Eyelink 1000 usi
 1. Connect the ethernet cable from Eyelink PC to MATLAB PC
 1. Connect the power cable from an outlet to the Eyelink
 1. Connect the data cable from the Eyelink PC to the Eyelink
+1. Connect the two plugs labeled L and R into the Left and Right sockets on the IR source box
 1. Turn on the Eyelink PC and select to boot Eyelink (instead of Windows) when prompted
 1. The Eyelink PC will enter DOS. Type `elcl` and press ENTER to start the Eyelink software
 1. Ensure that Eyelink software does not say “Cable FAULT” in the top right corner. If it does, check the ethernet cable and turn the Eyelink PC off and then on again.
