@@ -13,7 +13,7 @@ Instructions and scripts for collecting and analyzing data with Eyelink 1000 usi
 1. A computer with an Ethernet port (some laptops do not have this)
 
 ## Network Setup
-*This process will disable network and internet access until manually undone. To undo, follow the same steps but set the TCP/IPv4 back to automatic ip.*
+*This process will disable network and internet access until manually undone. To undo, follow the same steps but set the TCP/IPv4 back to automatic ip. This process does not need to be repeated unless it has been manually undone.*
 1. On the MATLAB PC...
 1. Open the Network Connections display...
     1. Windows 7:
