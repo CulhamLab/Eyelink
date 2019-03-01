@@ -17,9 +17,13 @@ Instructions and scripts for collecting and analyzing data with Eyelink 1000 usi
 1. On the MATLAB PC...
 1. Open the Network Connections display...
     1. Windows 7:
-        1. Press START and search for "View Network Connections" and open it
+        1. Press START
+        1. Search for "View Network Connections"
+        1. Select the match
     1. Windows 10:
-        1. Press START and search for "Change Ethernet Settings" and open it
+        1. Press START
+        1. Search for "Change Ethernet Settings"
+        1. Select the match
         1. Click "Change Adapter Settings"
 1. Identify the "Local Area Connection" (might be called Ethernet) that corresponds with the connection to the Eyelink PC (in most cases, there is only one). If there are multiple "Local Area Connection", look for the one that is connected. Alternatively, you could complete the following steps for each if you are not sure which one is used.
 1. Right click on the "Local Area Connection" and select properties
