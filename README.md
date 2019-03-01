@@ -48,3 +48,9 @@ Instructions and scripts for collecting and analyzing data with Eyelink 1000 usi
 1. The Eyelink PC will enter DOS. Type `elcl` and press ENTER to start the Eyelink software
 1. Ensure that Eyelink software does not say “Cable FAULT” in the top right corner. If it does, check the Ethernet cable and turn the Eyelink PC off and then on again.
 1. Start MATLAB on the MATLAB PC
+
+---
+
+# Analysis
+
+TODO
