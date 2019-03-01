@@ -1,0 +1,34 @@
+Do not turn on the Eyelink PC yet (turn off if already on)
+
+Do not open Matlab yet (close if open)
+
+On the main PC: Set network settings on main PC (unless still set from before) (this will prevent access to the internet)
+Click the start button and enter "change ethernet settings" and then click the match
+Click change adapter settings
+A window will open with one Ethernet connection, right click it and select properties
+Click on "Internet Protocol Version 4 (TCP/IPv4)" (fourth one down) and click Properties
+Switch from automatic ip to specified ip (top section)
+Enter:
+IP: 100.1.1.2
+Subnet: 255.255.255.0
+Gateway: leave blank
+Note: these settings disable the network/internet even if the original Ethernet cord is plugged back in
+Click OK to TCP/IPv4
+You can now close everything that you had opened
+To undo these changes and restore internet, set it back to "Obtain an IP address automatically"
+
+Connect the Ethernet cable (red) between the Eyelink PC and main PC (you will have to unplug the ethernet cable to the wall that connects the PC to the network and internet)
+
+Connect data and power cables to the Eyelink headmount camera if you haven't already
+Plug in the left and right cable in the Eyelink
+Also check that it has the correct lens
+
+Turn on Eyelink PC
+Select to boot Eyelink (instead of Windows)
+
+Enter elcl in the DOS on Eyelink PC
+
+Ensure that Eyelink PC does not say “Cable FAULT” in the top right corner (should say Link Closed)
+If it does, turn the Eyelink PC off/on and check the Ethernet connection.
+
+Start Matlab on main PC
