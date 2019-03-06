@@ -13,6 +13,11 @@ catch
     error('Eyelink requires the SDK from SR Research (http://download.sr-support.com/displaysoftwarerelease/EyeLinkDevKit_Windows_1.11.5.zip)')
 end
 
+%% Requires directory added to path
+if ~exist('EyelinkConnect','file')
+    error('The "AddToPath" directory must be added to the MATLAB path. Run "setup.m" or add manually.');
+end
+
 %% Parameters
 
 screen_number = max(Screen('Screens'));
