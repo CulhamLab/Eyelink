@@ -54,4 +54,8 @@ Instructions and scripts for collecting and analyzing data with Eyelink 1000 usi
 
 # Analysis
 
-TODO
+## Requirements
+1. MATLAB (32 or 64 bit)
+1. `AddToPath` must be added to the MATLAB path (run `setup.m` to do this automatically)
+
+## TODO
