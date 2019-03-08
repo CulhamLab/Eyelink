@@ -4,11 +4,12 @@ if ~exist('EyelinkConnect','file')
 end
 
 %% Parameters
-filename_edf = 'example.edf';
-filename_figure_overview = 'example_overview';
-filename_figure_trials = 'example_trials';
-filename_figure_trials_time = 'example_trials_time';
-filename_figure_all = 'example_all';
+prefix = 'example';
+filename_edf = [prefix '.edf'];
+filename_figure_overview = [prefix '_overview'];
+filename_figure_trials = [prefix '_trials'];
+filename_figure_trials_time = [prefix '_trials_time'];
+filename_figure_all = [prefix '_all'];
 
 regexp_start = 'Trial \d\d\d: START';
 regexp_end = 'Trial \d\d\d: END';
@@ -68,6 +69,9 @@ xy_max = max([x_max y_max]);
 num_trial = length(Xs);
 num_col = floor(sqrt(num_trial));
 num_row = ceil(sqrt(num_trial));
+if (num_col*num_row) < num_trial
+    num_row = num_row + 1;
+end
 fig_trial = figure('Position', [1 1 (num_row*200) (num_col*200)]);
 for trial = 1:num_trial
     subplot(num_col, num_row, trial);
