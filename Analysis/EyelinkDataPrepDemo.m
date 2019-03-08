@@ -4,11 +4,12 @@ if ~exist('EyelinkConnect','file')
 end
 
 %% Parameters
-filename_edf = 'example.edf';
-filename_figure_overview = 'example_overview';
-filename_figure_trials = 'example_trials';
-filename_figure_trials_time = 'example_trials_time';
-filename_figure_all = 'example_all';
+prefix = 'example';
+filename_edf = [prefix '.edf'];
+filename_figure_overview = [prefix '_overview'];
+filename_figure_trials = [prefix '_trials'];
+filename_figure_trials_time = [prefix '_trials_time'];
+filename_figure_all = [prefix '_all'];
 
 regexp_start = 'Trial \d\d\d: START';
 regexp_end = 'Trial \d\d\d: END';
