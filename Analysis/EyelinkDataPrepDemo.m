@@ -69,6 +69,9 @@ xy_max = max([x_max y_max]);
 num_trial = length(Xs);
 num_col = floor(sqrt(num_trial));
 num_row = ceil(sqrt(num_trial));
+if (num_col*num_row) < num_trial
+    num_row = num_row + 1;
+end
 fig_trial = figure('Position', [1 1 (num_row*200) (num_col*200)]);
 for trial = 1:num_trial
     subplot(num_col, num_row, trial);
