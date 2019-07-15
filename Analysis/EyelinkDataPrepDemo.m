@@ -111,3 +111,7 @@ axis equal
 legend(p,arrayfun(@(x) sprintf('Trial%03d',x), trial_nums_start, 'UniformOutput', false),'Location','EastOutside')
 title('All Trials')
 print(fig_all, [filename_figure_all '.png'], '-dpng', '-r300');
+
+
+%done
+close all
