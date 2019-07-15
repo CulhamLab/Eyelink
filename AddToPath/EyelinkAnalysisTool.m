@@ -1,2 +1,2 @@
 function EyelinkAnalysisTool
-EyelinkAnalysisTool.gui;
+EyelinkAnalysisTool.gui_main;

@@ -1,2 +1,0 @@
-function gui
-disp hello
