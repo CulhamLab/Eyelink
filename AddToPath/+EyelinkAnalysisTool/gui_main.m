@@ -16,5 +16,21 @@ EATGlobal.fig_main = [];
 %open new figure
 EATGlobal.fig_main.fig = open([EyelinkAnalysisTool.getpath 'gui_main.fig']);
 
-%% Initialize
-%TODO
+%% Setup
+
+%add callbacks
+% menu_file_save
+% menu_file_open
+% menu_file_import
+% menu_log_save
+% menu_log_clear
+% toolbar_save
+% toolbar_open
+% toolbar_import
+
+%get tags:
+% edit_log
+
+%% Log
+
+%todo
