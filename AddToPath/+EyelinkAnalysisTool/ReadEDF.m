@@ -13,9 +13,6 @@
 %Uses Edf2Mat (Adrian Etter, 2013)
 function [edf] = ReadEDF(filepath_edf, file_write, file_overwrite)
 
-%% TEMP
-filepath_edf = 'C:\Users\kmstu\Documents\GitHub\Eyelink\Analysis\example.edf';
-
 %% Defaults
 
 if ~exist('file_write', 'var')
