@@ -1,4 +1,4 @@
-function gui_main
+function GUI
 
 %% Global
 global EATGlobal;
@@ -14,7 +14,7 @@ EATGlobal.fig_main = [];
 
 %% Open New
 %open new figure
-EATGlobal.fig_main.fig = open([EyelinkAnalysisTool.getpath 'gui_main.fig']);
+EATGlobal.fig_main.fig = open([GetGUIPath 'gui_main.fig']);
 
 %% Setup
 
