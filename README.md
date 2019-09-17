@@ -60,4 +60,4 @@ Uses Edf2Mat from https://github.com/uzh/edf-converter (March 5, 2019)
 1. MATLAB (32 or 64 bit)
 1. `AddToPath` must be added to the MATLAB path (run `setup.m` to do this automatically)
 
-## TODO
+*There is no pipeline for analysis at this time, but the Edf2Mat tool simplifies processing EDFs. A simple example is included. See Eyelink project repositories for real examples.*
