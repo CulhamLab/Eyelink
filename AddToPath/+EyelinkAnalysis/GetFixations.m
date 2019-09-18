@@ -1,4 +1,4 @@
-%[fixations] = GetFixations(edf, time_start, time_end, allow_outside, restrict)
+%[fixations, number_fixations] = GetFixations(edf, time_start, time_end, allow_outside, restrict)
 %
 %Returns fixations within start/end time window.
 %
