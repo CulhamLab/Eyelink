@@ -1,4 +1,4 @@
-function EyelinkSetupScreen(window)
+function SetupScreen(window)
 
 %% stop if not connected
 if Eyelink('IsConnected')~=1, error('Error: not connected'); end

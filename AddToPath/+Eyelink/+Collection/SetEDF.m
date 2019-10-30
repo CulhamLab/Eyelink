@@ -1,4 +1,4 @@
-function EyelinkSetFile(filename)
+function SetFile(filename)
 
 %% check input
 

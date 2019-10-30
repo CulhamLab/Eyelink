@@ -1,4 +1,4 @@
-function EyelinkConnect
+function Connect
 
 %% Connect
 

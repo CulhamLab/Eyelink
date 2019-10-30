@@ -1,10 +1,11 @@
-function EyelinkShutdown
+function Close
 
 %% stop if not connected
 if Eyelink('IsConnected')~=1, error('Error: not connected'); end
 
-%% shutdown
-Eyelink('Shutdown');
+%% close
+Eyelink('Command', 'set_idle_mode');
+Eyelink('CloseFile');
 
 %% takes some time
 WaitSecs(0.5);
