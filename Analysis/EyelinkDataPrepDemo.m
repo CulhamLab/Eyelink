@@ -1,5 +1,5 @@
 %% Requires directory added to path
-if ~exist('EyelinkConnect','file')
+if isempty(which('Eyelink.Collection.Connect'))
     error('The "AddToPath" directory must be added to the MATLAB path. Run "setup.m" or add manually.');
 end
 
