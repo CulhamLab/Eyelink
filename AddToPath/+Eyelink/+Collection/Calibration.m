@@ -1,4 +1,4 @@
-function EyelinkCalibration
+function Calibration
 
 %% stop if not connected
 if Eyelink('IsConnected')~=1, error('Error: not connected'); end

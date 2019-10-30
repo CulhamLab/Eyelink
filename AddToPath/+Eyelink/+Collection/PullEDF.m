@@ -1,4 +1,4 @@
-function EyelinkPullEDF(filename_edf, full_filepath_to_copy_to)
+function PullEDF(filename_edf, full_filepath_to_copy_to)
 
 %% stop if not connected
 if Eyelink('IsConnected')~=1, error('Error: not connected'); end
