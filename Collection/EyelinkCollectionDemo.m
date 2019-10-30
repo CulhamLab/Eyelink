@@ -14,7 +14,7 @@ catch
 end
 
 %% Requires directory added to path
-if ~exist('EyelinkConnect','file')
+if isempty(which('Eyelink.Collection.Connect'))
     error('The "AddToPath" directory must be added to the MATLAB path. Run "setup.m" or add manually.');
 end
 
@@ -49,22 +49,22 @@ try
 %init
 DrawFormattedText(window, 'Eyelink Connect', 'center', 'center', screen_colour_text);
 Screen('Flip', window);
-EyelinkConnect
+Eyelink.Collection.Connect
     
 %set window used
 DrawFormattedText(window, 'Eyelink Set Window', 'center', 'center', screen_colour_text);
 Screen('Flip', window);
-EyelinkSetupScreen(window)
+Eyelink.Collection.SetupScreen(window)
 
 %set file to write to
 DrawFormattedText(window, 'Eyelink Set EDF', 'center', 'center', screen_colour_text);
 Screen('Flip', window);
-EyelinkSetEDF(filename_edf)
+Eyelink.Collection.SetEDF(filename_edf)
 
 %calibrate
 DrawFormattedText(window, 'Eyelink Calibration', 'center', 'center', screen_colour_text);
 Screen('Flip', window);
-EyelinkCalibration
+Eyelink.Collection.Calibration
 
 %collect
 for trial = 1:number_demo_trial
@@ -91,17 +91,17 @@ end
 %close
 DrawFormattedText(window, 'Eyelink Close', 'center', 'center', screen_colour_text);
 Screen('Flip', window);
-EyelinkClose
+Eyelink.Collection.Close
 
 %get edf
 DrawFormattedText(window, 'Eyelink Pull EDF', 'center', 'center', screen_colour_text);
 Screen('Flip', window);
-EyelinkPullEDF(filename_edf, full_path_to_put_edf)
+Eyelink.Collection.PullEDF(filename_edf, full_path_to_put_edf)
 
 %shutdown
 DrawFormattedText(window, 'Eyelink Shutdown', 'center', 'center', screen_colour_text);
 Screen('Flip', window);
-EyelinkShutdown
+Eyelink.Collection.Shutdown
 
 %done
 Screen('Close', window);
@@ -120,21 +120,21 @@ catch err
     if Eyelink('IsConnected')==1
         %try to close
         try
-            EyelinkClose
+            Eyelink.Collection.Close
         catch
             warning('Could not close Eyelink')
         end
         
         %try to get data
         try
-            EyelinkPullEDF(filename_edf, full_path_to_put_edf)
+            Eyelink.Collection.PullEDF(filename_edf, full_path_to_put_edf)
         catch
             warning('Could not pull EDF')
         end
         
         %try to shutddown
         try
-            EyelinkShutdown
+            Eyelink.Collection.Shutdown
         catch
             warning('Could not shut down connection to Eyelink')
         end
