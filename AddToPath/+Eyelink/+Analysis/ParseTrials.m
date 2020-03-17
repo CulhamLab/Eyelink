@@ -25,7 +25,7 @@ if ~exist('file_overwrite', 'var')
 end
 
 if ~exist('search_extra', 'var')
-    search_extra = cell(2,0);
+    search_extra = cell(0,2);
 end
 
 %% Handle Inputs
