@@ -5,8 +5,8 @@
 %
 %INPUTS:
 %filepath_edfmat        filepath to edf.mat to read
-%search_start           regexp search term for trial start message
-%search_end             regexp search term for trial end message
+%search_start           regexp search term for trial start message (can be cell array of multiple valid regexp)
+%search_end             regexp search term for trial end message (can be cell array of multiple valid regexp)
 %search_extra*          Nx2 cell matix of [name, search_term] for additional regexp searches, supports token name search (default: empty)
 %file_write*            true/false to write output to file (default: true)
 %file_overwrite*        true/false to overwrite existing file (default: false)
@@ -25,7 +25,7 @@ if ~exist('file_overwrite', 'var')
 end
 
 if ~exist('search_extra', 'var')
-    search_extra = cell(2,0);
+    search_extra = cell(0,2);
 end
 
 %% Handle Inputs
@@ -36,6 +36,14 @@ end
 
 if ~iscell(search_extra) || size(search_extra,2)~=2
     error('Invalid extra search')
+end
+
+if ~iscell(search_start)
+    search_start = {search_start};
+end
+
+if ~iscell(search_end)
+    search_end = {search_end};
 end
 
 %% Prep
@@ -59,8 +67,8 @@ if ~isfield(file, 'edf')
 end
 
 %% Find Starts/Ends
-ind_trial_starts = find(cellfun(@(x) ~isempty(regexp(x, search_start)), file.edf.Events.Messages.info));
-ind_trial_ends = find(cellfun(@(x) ~isempty(regexp(x, search_end)), file.edf.Events.Messages.info));
+ind_trial_starts = find( cellfun(@(x) any(~cellfun(@isempty, regexp(x, search_start))), file.edf.Events.Messages.info) );
+ind_trial_ends = find( cellfun(@(x) any(~cellfun(@isempty, regexp(x, search_end))), file.edf.Events.Messages.info) );
 
 number_trials = length(ind_trial_starts);
 fprintf('Found %d trials...\n', number_trials);
@@ -119,6 +127,6 @@ for trial = 1:number_trials
     end
     
     %fixations
-    [trials(trial).fixations, trials(trial).number_fixations] = EyelinkAnalysis.GetFixations(file.edf, trials(trial).time_start, trials(trial).time_end);
+    [trials(trial).fixations, trials(trial).number_fixations] = Eyelink.Analysis.GetFixations(file.edf, trials(trial).time_start, trials(trial).time_end);
     
 end

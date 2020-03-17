@@ -22,6 +22,9 @@ if ~exist('restrict', 'var')
     restrict = true;
 end
 
+fixations = [];
+number_fixations = 0;
+
 %% Handle Inputs
 
 if ~isobject(edf) || ~strcmp(class(edf),'Edf2Mat')
