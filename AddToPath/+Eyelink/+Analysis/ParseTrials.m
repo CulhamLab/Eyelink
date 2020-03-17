@@ -127,6 +127,6 @@ for trial = 1:number_trials
     end
     
     %fixations
-    [trials(trial).fixations, trials(trial).number_fixations] = EyelinkAnalysis.GetFixations(file.edf, trials(trial).time_start, trials(trial).time_end);
+    [trials(trial).fixations, trials(trial).number_fixations] = Eyelink.Analysis.GetFixations(file.edf, trials(trial).time_start, trials(trial).time_end);
     
 end
