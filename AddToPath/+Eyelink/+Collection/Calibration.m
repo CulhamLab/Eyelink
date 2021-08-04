@@ -7,7 +7,7 @@ if Eyelink('IsConnected')~=1, error('Error: not connected'); end
 
 % set calibration settings
 Eyelink('command', 'calibration_type = HV9');
-Eyelink('command', 'enable_automatic_calibration = YES');	% YES default
+Eyelink('command', 'enable_automatic_calibration = NO');	% YES default
 Eyelink('command', 'randomize_calibration_order  = YES');	% YES default
 Eyelink('command', 'automatic_calibration_pacing = 1000');	% 1000 ms default
 Eyelink('Command', 'generate_default_targets = YES');
